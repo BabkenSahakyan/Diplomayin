@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@../style/video.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VideoController">
+   <center>
+      <AnchorPane fx:id="anchorPane" onMouseClicked="#playPause" prefHeight="0.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" />
+            <AnchorPane prefHeight="137.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="timeLabel" layoutX="411.0" layoutY="112.0" onMouseClicked="#timeFormat" text="Text" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="60.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <AreaChart fx:id="chart" alternativeRowFillVisible="false" animated="false" cacheShape="false" centerShape="false" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" minHeight="-Infinity" prefHeight="100.0" prefWidth="480.0" scaleShape="false" verticalGridLinesVisible="false" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <xAxis>
+                      <NumberAxis animated="false" autoRanging="false" cacheShape="false" centerShape="false" forceZeroInRange="false" minorTickCount="0" minorTickLength="0.0" minorTickVisible="false" scaleShape="false" side="BOTTOM" tickLabelGap="0.0" tickLabelsVisible="false" tickLength="0.0" tickMarkVisible="false" tickUnit="0.0" upperBound="99" fx:id="xAxis">
+                           <tickLabelFont>
+                              <Font />
+                           </tickLabelFont>
+                        </NumberAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" animated="false" autoRanging="false" cacheShape="false" centerShape="false" minorTickCount="0" minorTickLength="0.0" scaleShape="false" side="LEFT" tickLabelGap="0.0" tickLabelsVisible="false" tickLength="0.0" tickUnit="0.0" upperBound="500.0" visible="false">
+                           <tickLabelFont>
+                              <Font />
+                           </tickLabelFont>
+                        </NumberAxis>
+                    </yAxis>
+                  </AreaChart>
+                  <Slider fx:id="volumeSlider" layoutX="60.0" layoutY="111.0" prefWidth="70.0" value="100" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="60.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Slider>
+                  <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#playPause" prefHeight="30.0" prefWidth="30.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="460.0" layoutY="102.0" mnemonicParsing="false" onMouseClicked="#fullScreen" prefHeight="30.0" prefWidth="30.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <ProgressBar fx:id="videoProgress" layoutX="10.0" layoutY="77.0" maxHeight="10.0" minHeight="10.0" onMouseClicked="#seek" prefHeight="10.0" prefWidth="480.0" progress="0.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </ProgressBar>
+                  <Button fx:id="handButton" mnemonicParsing="false" onMouseClicked="#handWindow" prefHeight="30.0" prefWidth="30.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

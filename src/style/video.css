@@ -1,0 +1,36 @@
+/*.slider .progress-indicator .progress-bar{*/
+    /*-fx-background-color:null;  !* Hide the track *!*/
+    /*-fx-background-insets: 1 0 -1 0, 0, 1;*/
+    /*-fx-background-radius: 2.5, 2.5, 1.5;*/
+    /*-fx-padding: 0.208333em; !* 2.5 *!*/
+    /*-fx-progress-color: chocolate;*/
+    /*-fx-control-inner-background: palegreen;*/
+/*}*/
+/*#volume{*/
+    /*-fx-border-color: blue;*/
+/*}*/
+
+#anchorPane{
+    -fx-background-color: black;
+}
+
+.chart-area-symbol { -fx-background-color: rgba(36, 34, 238, 0.35); }
+
+.chart-series-area-line { -fx-stroke: rgba(36, 34, 238, 0.35); }
+
+.chart-series-area-fill { -fx-fill: rgba(36, 34, 238, 0.35);}
+
+.chart-plot-background{
+    -fx-opacity: 0;
+}
+
+.progress-bar > .track{
+    -fx-opacity: 0.5;
+}
+
+#videoProgress > .bar {
+    -fx-background-insets: 0;
+}
+/*.thumb{*/
+    /*visibility: hidden;*/
+/*}*/
